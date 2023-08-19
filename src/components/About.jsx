@@ -1,9 +1,12 @@
+/* eslint-disable react-refresh/only-export-components */
 import React from "react";
 import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 import { styles } from "../style";
 import { services } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
+import { SectionWrapper } from "../HOC";
+
 const ServiceCard = ({ title, index, icon }) => {
   return (
     <Tilt className="xs:w-[250px] w-full">
@@ -56,4 +59,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default SectionWrapper(About, "About");
