@@ -6,11 +6,16 @@ import { styles } from "../style";
 import { services } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 import { SectionWrapper } from "../HOC";
+import { useInView } from "react-intersection-observer";
 
 const ServiceCard = ({ title, index, icon }) => {
+  const [ref, inView] = useInView(); // Track if the component is in view
   return (
     <Tilt className="xs:w-[250px] w-full">
       <motion.div
+        initial="hidden"
+        animate={inView ? "show" : "hidden"} // Animate based on inView status
+        ref={ref} // Attach the ref to the section element
         variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
         className="w-full rounded-[20px] green-pink-gradient p-[1px] shadow-card"
       >
@@ -29,6 +34,7 @@ const ServiceCard = ({ title, index, icon }) => {
 };
 
 const About = () => {
+  const [ref, inView] = useInView(); // Track if the component is in view
   return (
     <>
       <motion.div variants={textVariant()}>
@@ -36,6 +42,9 @@ const About = () => {
         <h2 className={styles.sectionHeadText}>Overview.</h2>
       </motion.div>
       <motion.p
+        initial="hidden"
+        animate={inView ? "show" : "hidden"} // Animate based on inView status
+        ref={ref} // Attach the ref to the section element
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[18px]
         leading-[30px] max-w-3xl"
