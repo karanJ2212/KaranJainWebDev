@@ -4,6 +4,9 @@ import creator from "./creator.png";
 import mobile from "./mobile.png";
 import web from "./web.png";
 import github from "./github.png";
+import linkedin from "./linkedin.jpg";
+import downloadResume from "./downloadResume.png";
+import resume from "./resume.pdf";
 import menu from "./menu.svg";
 import close from "./close.svg";
 
@@ -37,6 +40,9 @@ export {
   mobile,
   web,
   github,
+  linkedin,
+  resume,
+  downloadResume,
   menu,
   close,
   css,
