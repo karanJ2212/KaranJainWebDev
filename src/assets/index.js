@@ -31,7 +31,20 @@ import tesla from "./company/tesla.png";
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
+import magicmath from "./magic-math.png";
+import awesomeBook from "./awesomeBook.png";
+import garmentexpo from "./garmentexpo.png";
+import bookstore from "./bookstore.png";
+import WeatherReport from "./WeatherReport.png";
+import bnb from "./bnb.png";
 import tripguide from "./tripguide.png";
+import rails from "./tech/rails.png";
+import expenseTracker from "./expenseTracker.png";
+import recipeApp from "./recipeApp.png";
+import spacetraveller from "./spacetraveller.png";
+import moviegeeks from "./moviegeeks.png";
+import SHOPPINGSPREE from "./SHOPPINGSPREE.png";
+import ruby from "./tech/ruby.png";
 
 export {
   logo,
@@ -43,6 +56,17 @@ export {
   linkedin,
   resume,
   downloadResume,
+  WeatherReport,
+  awesomeBook,
+  recipeApp,
+  SHOPPINGSPREE,
+  moviegeeks,
+  magicmath,
+  bnb,
+  expenseTracker,
+  garmentexpo,
+  bookstore,
+  spacetraveller,
   menu,
   close,
   css,
@@ -65,4 +89,6 @@ export {
   carrent,
   jobit,
   tripguide,
+  ruby,
+  rails,
 };

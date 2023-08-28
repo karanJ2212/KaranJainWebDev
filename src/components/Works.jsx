@@ -6,6 +6,8 @@ import { github } from "../assets";
 import { SectionWrapper } from "../HOC";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
+import { BsArrowUpRightCircle } from "react-icons/bs";
+import { AiFillGithub } from "react-icons/ai";
 
 const ProjectCard = ({
   index,
@@ -13,10 +15,11 @@ const ProjectCard = ({
   description,
   tags,
   image,
-  source_code_Link,
+  source_code_link,
+  live_link,
 }) => {
   return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
+    <motion.div>
       <Tilt
         options={{
           max: 45,
@@ -31,18 +34,38 @@ const ProjectCard = ({
             alt={name}
             className="w-full h-full object-cover rounded-2xl"
           />
+
           <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
             <div
-              onClick={(() => window.open(source_code_Link), "_blank")}
-              className="black-gradient rounded-full w-10 h-10 flex justify-center items-center cursor-pointer"
+              onClick={() => window.open(source_code_link, "_blank")}
+              className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
             >
-              <img src={github} />
+              <img
+                src={github}
+                alt="source code"
+                className="w-1/2 h-1/2 object-contain"
+              />
             </div>
           </div>
         </div>
+
         <div className="mt-5">
           <h3 className="text-white font-bold">{name}</h3>
           <p className="mt-2 text-secondary text-[14px] ">{description}</p>
+        </div>
+        <div className="flex gap-4 items-center justify-center mt-5">
+          <button
+            className="flex gap-2 p-2 rounded-md bg-inherit border-[1.5px] hover:bg-white hover:text-black text-sm"
+            onClick={() => window.open(source_code_link, "_blank")}
+          >
+            See Source <AiFillGithub size={20} />
+          </button>
+          <button
+            className="flex gap-2 p-2 rounded-md bg-inherit border-[1.5px] hover:bg-white hover:text-black text-sm"
+            onClick={() => window.open(live_link, "_blank")}
+          >
+            See Live <BsArrowUpRightCircle size={20} />
+          </button>
         </div>
         <div className="flex flex-wrap mt-4 gap-2">
           {tags.map((tag) => (

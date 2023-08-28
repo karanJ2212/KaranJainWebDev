@@ -11,17 +11,31 @@ import {
   redux,
   tailwind,
   nodejs,
-  mongodb,
+  spacetraveller,
+  recipeApp,
+  SHOPPINGSPREE,
+  moviegeeks,
+  // mongodb,
+  rails,
+  ruby,
   git,
   figma,
-  docker,
+  // docker,
   meta,
   starbucks,
   tesla,
   shopify,
-  carrent,
-  jobit,
-  tripguide,
+  // carrent,
+  // jobit,
+  magicmath,
+  awesomeBook,
+  garmentexpo,
+  WeatherReport,
+  bnb,
+  bookstore,
+  expenseTracker,
+
+  // tripguide,
   threejs,
 } from "../assets";
 
@@ -54,7 +68,7 @@ const services = [
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "System Engineer",
     icon: creator,
   },
 ];
@@ -93,9 +107,17 @@ const technologies = [
     icon: nodejs,
   },
   {
-    name: "MongoDB",
-    icon: mongodb,
+    name: "Ruby",
+    icon: ruby,
   },
+  {
+    name: "Rails",
+    icon: rails,
+  },
+  // {
+  //   name: "MongoDB",
+  //   icon: mongodb,
+  // },
   {
     name: "Three JS",
     icon: threejs,
@@ -108,10 +130,10 @@ const technologies = [
     name: "figma",
     icon: figma,
   },
-  {
-    name: "docker",
-    icon: docker,
-  },
+  // {
+  //   name: "docker",
+  //   icon: docker,
+  // },
 ];
 
 const experiences = [
@@ -198,30 +220,173 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Movie Geeks",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "The website is a powerful search engine for shows and movies, built using the cutting-edge React and Redux toolkit. With this website, users can easily find and browse through their favorite shows and movies with an intuitive and user-friendly interface",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "redux",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "create-react",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "storage",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "javascript",
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: moviegeeks,
+    source_code_link: "https://github.com/karanJ2212/moviegeeks",
+    live_link: "https://karanj2212.github.io/moviegeeks/",
   },
   {
-    name: "Job IT",
+    name: "Shopping Spree",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "An innovative e-commerce website project, built with the advanced technologies of React and Redux Toolkit. Our website boasts a sleek, modern SAAS design and interactive features such as a shopping cart, category page, and detailed product descriptions, providing a seamless online shopping experience for users.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "redux",
+        color: "green-text-gradient",
+      },
+      {
+        name: "create-react",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "storage",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "javascript",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: SHOPPINGSPREE,
+    source_code_link: "https://github.com/karanJ2212/shoppingspree",
+    live_link: "https://karanj2212.github.io/shoppingspree/",
+  },
+  {
+    name: "Magic Math",
+    description:
+      "This is a React website that has a functional calculator app. Key feature include -a home page -a calculator page -a quote page - complete testing modules",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "hooks",
+        color: "red-text-gradient",
+      },
+      {
+        name: "router-dom",
+        color: "green-text-gradient",
+      },
+      {
+        name: "jest",
+        color: "yellow-text-gradient",
+      },
+      {
+        name: "jest-mocking",
+        color: "green-text-gradient",
+      },
+      {
+        name: "scss",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: magicmath,
+    source_code_link: "https://github.com/karanJ2212/magic-math",
+    live_link: "https://github.com/karanJ2212/magic-math",
+  },
+  {
+    name: "Awesome Books",
+    description:
+      "This is vanilla javascript book keeping application. Its has functionality of add and remove and uses local storage. Its made as per design requirements of microverse and made using HTML,CSS and Javascript",
+    tags: [
+      {
+        name: "Javascript",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "html",
+        color: "green-text-gradient",
+      },
+      {
+        name: "css",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: awesomeBook,
+    source_code_link: "https://github.com/karanJ2212/ES6AwesomeBook",
+    live_link: "https://javascript-awesomebook.netlify.app/#",
+  },
+  {
+    name: "GARMENT TECHNOLOGY EXPO",
+    description:
+      "This project is Microverse Module 1 Capstone project and made with HTML, CSS and JavaScript. This a website for garment expo India which showcases main events ,highlights and contact informations.",
+    tags: [
+      {
+        name: "html",
+        color: "green-text-gradient",
+      },
+      {
+        name: "css",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: garmentexpo,
+    source_code_link: "https://github.com/karanJ2212/CapstoneModule1",
+    live_link: "https://karanj2212.github.io/CapstoneModule1/",
+  },
+  {
+    name: "The_Bookstore_app with React",
+    description:
+      "[the_bookstore_app] is an online Application made with react and redux . It allows user to seemlessly manage online book collection",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "redux",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Javascript",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "html",
+        color: "green-text-gradient",
+      },
+      {
+        name: "css",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: bookstore,
+    source_code_link: "https://github.com/karanJ2212/the_bookstore_app",
+    live_link: "https://bookstorereact22.netlify.app/",
+  },
+  {
+    name: "Weather Report",
+    description:
+      "Weather Report Weather Report is a SPA built using react and redux toolkit. It contains list of all the countries and their states . You can select any country and get the detailed weather condition in the specific country and its state territory.",
     tags: [
       {
         name: "react",
@@ -232,24 +397,15 @@ const projects = [
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "tailwind-css",
         color: "pink-text-gradient",
       },
-    ],
-    image: jobit,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
       {
-        name: "nextjs",
+        name: "Javascript",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "html",
         color: "green-text-gradient",
       },
       {
@@ -257,8 +413,135 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: WeatherReport,
+    source_code_link: "https://github.com/karanJ2212/weather_report",
+    live_link: "https://weather-report22.netlify.app/",
+  },
+  {
+    name: "BnB Homes",
+    description:
+      "BnB Homes is an app that allows users to view homes and reserve them for stays. It features a simple authentication and it is built with Rails and React (styled with Tailwind-CSS).",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Ruby on Rails",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwind-css",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Javascript",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "html",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Full-stack",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: bnb,
+    source_code_link: "https://github.com/karanJ2212/BnB-homes",
+  },
+  {
+    name: "Expense-tracker",
+    description:
+      "Expense Tracker is a user-friendly web-based budgeting application built on the powerful Ruby on Rails framework, with PostgreSQL as its reliable database backend. This application empowers users to effortlessly monitor and manage their income and expenses, providing full control over their financial activities.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Ruby on Rails",
+        color: "green-text-gradient",
+      },
+
+      {
+        name: "Javascript",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "html",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Full-stack",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: expenseTracker,
+    source_code_link: "https://github.com/karanJ2212/BnB-homes",
+  },
+  {
+    name: "space_travelers_hub",
+    description:
+      "The Spacetravelers is a website for a company that provides commercial and scientific space travel services. It uses real live data from the SpaceX API. The website allows users to book rockets and join selected space missions.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "redux",
+        color: "green-text-gradient",
+      },
+
+      {
+        name: "Javascript",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "html",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Full-stack",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: spacetraveller,
+    source_code_link: "https://github.com/karanJ2212/space_travelers_hub",
+    live_link: "https://space-travelers-hub-70x5.onrender.com/",
+  },
+  {
+    name: "Expense-tracker",
+    description:
+      "Expense Tracker is a user-friendly web-based budgeting application built on the powerful Ruby on Rails framework, with PostgreSQL as its reliable database backend. This application empowers users to effortlessly monitor and manage their income and expenses, providing full control over their financial activities.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Ruby on Rails",
+        color: "green-text-gradient",
+      },
+
+      {
+        name: "Javascript",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "html",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Full-stack",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: recipeApp,
+    source_code_link:
+      "https://github.com/karanJ2212/Recipe-App?organization=karanJ2212&organization=karanJ2212",
+    live_link: "https://recipe-app-0tvs.onrender.com/",
   },
 ];
 
