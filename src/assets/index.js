@@ -44,7 +44,14 @@ import recipeApp from "./recipeApp.png";
 import spacetraveller from "./spacetraveller.png";
 import moviegeeks from "./moviegeeks.png";
 import SHOPPINGSPREE from "./SHOPPINGSPREE.png";
+import personalproject from "./personalproject.jpeg";
+import murple_logo from "./murple_logo.png";
+import at from "./at.png";
+import infy from "./infy.jpeg";
 import ruby from "./tech/ruby.png";
+import saba from "./saba.jpeg";
+import dimond from "./dimond.jpeg";
+import blessing from "./blessing.jpeg";
 
 export {
   logo,
@@ -60,6 +67,9 @@ export {
   awesomeBook,
   recipeApp,
   SHOPPINGSPREE,
+  murple_logo,
+  at,
+  infy,
   moviegeeks,
   magicmath,
   bnb,
@@ -67,6 +77,7 @@ export {
   garmentexpo,
   bookstore,
   spacetraveller,
+  personalproject,
   menu,
   close,
   css,
@@ -91,4 +102,7 @@ export {
   tripguide,
   ruby,
   rails,
+  saba,
+  dimond,
+  blessing,
 };

@@ -4,6 +4,8 @@ import { styles } from "../style";
 
 import { downloadResume, github, linkedin, resume } from "../assets";
 
+import "./heroStyle.css";
+
 const Hero = () => {
   return (
     <section className="relative w-full h-screen mx-auto">
@@ -42,21 +44,27 @@ const Hero = () => {
               alt="LinkedIn"
               className="cursor-pointer w-[210px]"
               onClick={() =>
-                window.open("https://www.linkedin.com/in/karanj2212", "_blank")
+                window.open(
+                  "https://www.linkedin.com/in/karanjain2212/",
+                  "_blank"
+                )
               }
             />
-            <a
-              href={resume}
-              target="_blank"
-              rel="noopener noreferrer"
-              download="KaranJain_WebDev.pdf"
-            >
-              <img
-                src={downloadResume}
-                alt="Download Resume"
-                className="cursor-pointer w-[80px]"
-              />
-            </a>
+            <div className="tooltip-container">
+              <a
+                href={resume}
+                target="_blank"
+                rel="noopener noreferrer"
+                download="KaranJain_WebDev.pdf"
+              >
+                <img
+                  src={downloadResume}
+                  alt="Download Resume"
+                  className="cursor-pointer w-[80px]"
+                />
+              </a>
+              <div className="tooltip">Click here to download the resume</div>
+            </div>
           </div>
         </div>
       </div>
