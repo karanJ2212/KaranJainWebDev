@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { styles } from "../style";
 import { navLinks } from "../constants";
@@ -7,8 +7,24 @@ import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar = () => {
-  const [Active, setActive] = useState("");
+  const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      if (scrollTop > 100) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   return (
     <nav
       className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-primary`}
@@ -31,18 +47,15 @@ const Navbar = () => {
         </Link>
 
         <ul className="list-none hidden sm:flex flex-row gap-10">
-          {navLinks.map((link) => (
+          {navLinks.map((nav) => (
             <li
-              key={link.id}
+              key={nav.id}
               className={`${
-                Active === link.title ? "text-white" : "text-secondary"
+                active === nav.title ? "text-white" : "text-secondary"
               } hover:text-white text-[18px] font-medium cursor-pointer`}
-              onClick={() => {
-                console.log("clicked", link.title);
-                setActive(link.title);
-              }}
+              onClick={() => setActive(nav.title)}
             >
-              <Link to={link.id}>{link.title}</Link>
+              <a href={`#${nav.id}`}>{nav.title}</a>
             </li>
           ))}
         </ul>
@@ -66,7 +79,7 @@ const Navbar = () => {
                 <li
                   key={link.id}
                   className={`${
-                    Active === link.title ? "text-white" : "text-secondary"
+                    active === link.title ? "text-white" : "text-secondary"
                   }font-poppins font-medium cursor-pointer text-[19px]`}
                   onClick={() => {
                     console.log("clicked", link.title);

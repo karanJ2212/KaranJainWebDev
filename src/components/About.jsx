@@ -55,8 +55,7 @@ const About = () => {
         mastered front-end development, responsive design, JavaScript, React
         with Redux, API integration, semantic HTML, and Git version control. My
         expertise extends to crafting seamless user experiences, web performance
-        optimization, debugging, testing, and database management in Ruby on
-        Rails.
+        optimization, debugging, testing, and database management.
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">
@@ -68,4 +67,4 @@ const About = () => {
   );
 };
 
-export default SectionWrapper(About, "About");
+export default SectionWrapper(About, "about");
