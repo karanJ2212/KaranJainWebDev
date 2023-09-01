@@ -10,17 +10,9 @@ import { BsArrowUpRightCircle } from "react-icons/bs";
 import { AiFillGithub, AiOutlineArrowRight } from "react-icons/ai";
 
 import Slider from "react-slick";
-import { settings } from "../constants/settings";
+import { settings, Rubysettings } from "../constants/settings";
 
 import "./workStyle.css";
-
-// const Rubysettings = {
-//   dots: true,
-//   infinite: true,
-//   speed: 500,
-//   slidesToShow: 2,
-//   slidesToScroll: 2,
-// };
 
 const ProjectCard = ({
   index,
@@ -109,7 +101,7 @@ const ProjectCardRoR = ({
           scale: 1,
           speed: 450,
         }}
-        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
+        className="bg-tertiary p-5 rounded-2xl sm:w-[160px] w-full"
       >
         <div className="relative w-full h-[200px]">
           <img
@@ -230,7 +222,7 @@ const Works = () => {
             React-Ruby on Rails Projects
           </p>
           <div className="flex flex-row justify-center gap-5">
-            <Slider slidesToShow={2} slidesToScroll={2}>
+            <Slider {...Rubysettings}>
               {projects.map((project, index) => (
                 <div key={index} className="mx-5">
                   <ProjectCardRoR
