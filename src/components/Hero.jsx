@@ -2,31 +2,22 @@ import React from "react";
 import { motion } from "framer-motion";
 import { styles } from "../style";
 
-import { downloadResume, github, linkedin, resume } from "../assets";
-import {
-  AiFillGithub,
-  AiOutlineMedium,
-  AiFillLinkedin,
-  AiOutlineTwitter,
-} from "react-icons/ai";
+import { downloadResume, resume } from "../assets";
+import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 
 import "./heroStyle.css";
 
 const Hero = () => {
   return (
     <section className="relative w-full h-screen mx-auto">
-      {/* // insert-0 is for inserting a text */}
       <div
         className={`${styles.paddingX} absolute inset-0 top-[120px]  max-w-7xl mx-auto flex flex-row item-start gap-5`}
       >
-        {/* for circle and line */}
-
         <div className="flex flex-col justify-start items-center mt-5">
           <div className="w-5 h-5 rounded-full bg-[#915eff]" />
           <div className="w-1 sm:h-80 h-40 violet-gradient" />
         </div>
 
-        {/* text hi i am karan */}
         <div>
           <h1 className={`${styles.heroHeadText}`}>
             Hi, I'm <span className="text-[#915eff]">Karan</span>
@@ -37,14 +28,6 @@ const Hero = () => {
             applications
           </p>
           <div className="mt-[50px] flex justify-start gap-20 flex-wrap ">
-            {/* <img
-              src={github}
-              alt="github"
-              className="flex gap-2 p-1 bg-inherit hover:text-red-500 text-4xl md:text-xl"
-              onClick={() =>
-                window.open("https://github.com/karanJ2212", "_blank")
-              }
-            /> */}
             <button
               className="flex gap-2 p-1 bg-inherit hover:text-red-500 text-4xl md:text-5xl"
               onClick={() =>
@@ -53,17 +36,7 @@ const Hero = () => {
             >
               <AiFillGithub />
             </button>
-            {/* <img
-              src={linkedin}
-              alt="LinkedIn"
-              className="flex gap-2 p-1 bg-inherit hover:text-red-500 text-4xl md:text-xl"
-              onClick={() =>
-                window.open(
-                  "https://www.linkedin.com/in/karanjain2212/",
-                  "_blank"
-                )
-              }
-            /> */}
+
             <button
               className="flex gap-2 p-1 bg-inherit hover:text-red-500 text-4xl md:text-5xl"
               onClick={() =>
@@ -75,7 +48,7 @@ const Hero = () => {
             >
               <AiFillLinkedin />
             </button>
-            <div className="tooltip-container">
+            <motion.div className="tooltip-container shadow-card">
               <a
                 href={resume}
                 target="_blank"
@@ -85,11 +58,11 @@ const Hero = () => {
                 <img
                   src={downloadResume}
                   alt="Download Resume"
-                  className="flex gap-2 p-1 bg-inherit hover:text-red-500 text-4xl md:text-5xl w-[65px]"
+                  className="w-16 h-16 md:w-20 md:h-20 transition-transform transform-gpu hover:scale-110"
                 />
               </a>
               <div className="tooltip">Click here to download the resume</div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
