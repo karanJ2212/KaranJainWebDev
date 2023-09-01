@@ -10,17 +10,9 @@ import { BsArrowUpRightCircle } from "react-icons/bs";
 import { AiFillGithub, AiOutlineArrowRight } from "react-icons/ai";
 
 import Slider from "react-slick";
-import { settings } from "../constants/settings";
+import { settings, Rubysettings } from "../constants/settings";
 
 import "./workStyle.css";
-
-// const Rubysettings = {
-//   dots: true,
-//   infinite: true,
-//   speed: 500,
-//   slidesToShow: 2,
-//   slidesToScroll: 2,
-// };
 
 const ProjectCard = ({
   index,
@@ -102,19 +94,12 @@ const ProjectCardRoR = ({
   live_link,
 }) => {
   return (
-    <motion.div>
-      <Tilt
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
-        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
-      >
-        <div className="relative w-full h-[200px]">
+    <div>
+      <div className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full cursor-pointer">
+        <div className="relative w-full h-[230px]">
           <img
             src={image}
-            alt={name}
+            alt="project_image"
             className="w-full h-full object-cover rounded-2xl"
           />
 
@@ -133,9 +118,10 @@ const ProjectCardRoR = ({
         </div>
 
         <div className="mt-5">
-          <h3 className="text-white font-bold">{name}</h3>
-          <p className="mt-2 text-secondary text-[14px] ">{description}</p>
+          <h3 className="text-white font-bold text-[24px]">{name}</h3>
+          <p className="mt-2 text-secondary text-[14px]">{description}</p>
         </div>
+
         <div className="flex gap-4 items-center justify-center mt-5">
           <button
             className="flex gap-2 p-2 rounded-md bg-inherit border-[1.5px] hover:bg-white hover:text-black text-sm"
@@ -143,26 +129,29 @@ const ProjectCardRoR = ({
           >
             See Source <AiFillGithub size={20} />
           </button>
-
           <div className="tooltip-container">
             <button
               className="flex gap-2 p-2 rounded-md bg-inherit border-[1.5px] hover:bg-white hover:text-black text-sm"
-              title="This project is yeet to be deployed"
+              onClick={() => window.open(live_link, "_blank")}
             >
               See Live <BsArrowUpRightCircle size={20} />
             </button>
             <div className="tooltip">This project is yet to be deployed</div>
           </div>
         </div>
-        <div className="flex flex-wrap mt-4 gap-2">
+
+        <div className="mt-4 flex flex-wrap gap-2">
           {tags.map((tag) => (
-            <p key={tag.name} className={`text-[14px] ${tag.color}`}>
+            <p
+              key={`${name}-${tag.name}`}
+              className={`text-[14px] ${tag.color}`}
+            >
               #{tag.name}
             </p>
           ))}
         </div>
-      </Tilt>
-    </motion.div>
+      </div>
+    </div>
   );
 };
 
@@ -229,8 +218,8 @@ const Works = () => {
           <p className={`${styles.sectionSubText} text-center mt-[100px]`}>
             React-Ruby on Rails Projects
           </p>
-          <div className="flex flex-row justify-center gap-5">
-            <Slider slidesToShow={2} slidesToScroll={2}>
+          {/* <div className="flex flex-row justify-center gap-5">
+            <Slider {...Rubysettings}>
               {projects.map((project, index) => (
                 <div key={index} className="mx-5">
                   <ProjectCardRoR
@@ -241,6 +230,15 @@ const Works = () => {
                 </div>
               ))}
             </Slider>
+          </div> */}
+          <div className="mt-20 flex flex-wrap gap-7 justify-center">
+            {projects.map((project, index) => (
+              <ProjectCardRoR
+                key={`project-${index}`}
+                index={index}
+                {...project}
+              />
+            ))}
           </div>
         </div>
       </div>

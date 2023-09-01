@@ -3,6 +3,12 @@ import { motion } from "framer-motion";
 import { styles } from "../style";
 
 import { downloadResume, github, linkedin, resume } from "../assets";
+import {
+  AiFillGithub,
+  AiOutlineMedium,
+  AiFillLinkedin,
+  AiOutlineTwitter,
+} from "react-icons/ai";
 
 import "./heroStyle.css";
 
@@ -31,25 +37,44 @@ const Hero = () => {
             applications
           </p>
           <div className="mt-[50px] flex justify-start gap-20 flex-wrap ">
-            <img
+            {/* <img
               src={github}
               alt="github"
-              className="cursor-pointer w-[90px]"
+              className="flex gap-2 p-1 bg-inherit hover:text-red-500 text-4xl md:text-xl"
               onClick={() =>
                 window.open("https://github.com/karanJ2212", "_blank")
               }
-            />
-            <img
+            /> */}
+            <button
+              className="flex gap-2 p-1 bg-inherit hover:text-red-500 text-4xl md:text-5xl"
+              onClick={() =>
+                window.open("https://github.com/karanJ2212", "_blank")
+              }
+            >
+              <AiFillGithub />
+            </button>
+            {/* <img
               src={linkedin}
               alt="LinkedIn"
-              className="cursor-pointer w-[210px]"
+              className="flex gap-2 p-1 bg-inherit hover:text-red-500 text-4xl md:text-xl"
               onClick={() =>
                 window.open(
                   "https://www.linkedin.com/in/karanjain2212/",
                   "_blank"
                 )
               }
-            />
+            /> */}
+            <button
+              className="flex gap-2 p-1 bg-inherit hover:text-red-500 text-4xl md:text-5xl"
+              onClick={() =>
+                window.open(
+                  "https://www.linkedin.com/in/karanjain2212/",
+                  "_blank"
+                )
+              }
+            >
+              <AiFillLinkedin />
+            </button>
             <div className="tooltip-container">
               <a
                 href={resume}
@@ -60,7 +85,7 @@ const Hero = () => {
                 <img
                   src={downloadResume}
                   alt="Download Resume"
-                  className="cursor-pointer w-[80px]"
+                  className="flex gap-2 p-1 bg-inherit hover:text-red-500 text-4xl md:text-5xl w-[65px]"
                 />
               </a>
               <div className="tooltip">Click here to download the resume</div>
