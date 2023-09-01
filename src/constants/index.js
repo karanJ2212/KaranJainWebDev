@@ -321,7 +321,7 @@ const reactProject = [
   {
     name: "Weather Report",
     description:
-      "Weather Report Weather Report is a SPA built using react and redux toolkit. It contains list of all the countries and their states . You can select any country and get the detailed weather condition in the specific country and its state territory.",
+      "Weather Report is a SPA built using react and redux toolkit. It contains list of all the countries and their states . You can select any country and get the detailed weather condition in the specific country and its state territory.",
     tags: [
       {
         name: "react",
