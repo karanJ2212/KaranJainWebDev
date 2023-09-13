@@ -44,6 +44,8 @@ import recipeApp from "./recipeApp.png";
 import spacetraveller from "./spacetraveller.png";
 import moviegeeks from "./moviegeeks.png";
 import SHOPPINGSPREE from "./SHOPPINGSPREE.png";
+import joke from "./joke.png";
+import summarizer from "./summarizer.png";
 import personalproject from "./personalproject.jpeg";
 import murple_logo from "./murple_logo.png";
 import at from "./at.png";
@@ -105,4 +107,6 @@ export {
   saba,
   dimond,
   blessing,
+  summarizer,
+  joke,
 };

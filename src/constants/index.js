@@ -14,6 +14,7 @@ import {
   spacetraveller,
   recipeApp,
   SHOPPINGSPREE,
+  joke,
   moviegeeks,
   // mongodb,
   rails,
@@ -38,6 +39,7 @@ import {
   bnb,
   bookstore,
   expenseTracker,
+  summarizer,
   saba,
   dimond,
 
@@ -289,6 +291,36 @@ const reactProject = [
     live_link: "https://karanj2212.github.io/shoppingspree/",
   },
   {
+    name: "Open-AI summarizer",
+    description:
+      "The Article Summarizer App is a powerful tool built with React.js, RTK Query, and Tailwind CSS, supercharged with the incredible capabilities of the OpenAI GPT model. This app simplifies the process of extracting concise and informative summaries from any web page.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "redux toolkit",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Javascript",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Open-AI",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwind-css",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: summarizer,
+    source_code_link: "https://github.com/karanJ2212/AI-summarizer",
+    live_link: "https://article-summary-opan-ai.netlify.app/",
+  },
+  {
     name: "The_Bookstore_app with React",
     description:
       "[the_bookstore_app] is an online Application made with react and redux . It allows user to seemlessly manage online book collection",
@@ -490,6 +522,36 @@ const jsProjects = [
     image: garmentexpo,
     source_code_link: "https://github.com/karanJ2212/CapstoneModule1",
     live_link: "https://karanj2212.github.io/CapstoneModule1/",
+  },
+  {
+    name: "Tell-me-a-Joke",
+    description:
+      "Joke-teller Introducing the Joke-Teller App: Your new go-to source for laughter and amusement! This innovative application has been crafted with the power of vanilla JavaScript, seamlessly integrating two dynamic APIs - the Rapid API Text-to-Speech and the Joke Teller API.",
+    tags: [
+      {
+        name: "Javascript",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Text-to-speach",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Joke-API",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "html",
+        color: "green-text-gradient",
+      },
+      {
+        name: "css",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: joke,
+    source_code_link: "https://github.com/karanJ2212/Tell-Me-A-Joke/tree/main",
+    live_link: "https://karanj2212.github.io/Tell-Me-A-Joke/",
   },
 ];
 const projects = [
