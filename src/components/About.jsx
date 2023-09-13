@@ -1,5 +1,5 @@
 /* eslint-disable react-refresh/only-export-components */
-import React from "react";
+import React, { useRef } from "react";
 import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 import { styles } from "../style";
@@ -10,37 +10,85 @@ import { useInView } from "react-intersection-observer";
 
 const ServiceCard = ({ title, index, icon }) => {
   const [ref, inView] = useInView(); // Track if the component is in view
+
+  const windowSize = useRef([window.innerWidth, window.innerHeight]);
+  const [width, height] = windowSize.current;
+
   return (
-    <Tilt className="xs:w-[250px] w-full">
-      <motion.div
-        initial="hidden"
-        animate={inView ? "show" : "hidden"} // Animate based on inView status
-        ref={ref} // Attach the ref to the section element
-        variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
-        className="w-full rounded-[20px] green-pink-gradient p-[1px] shadow-card"
-      >
-        <div
-          options={{ max: 45, scale: 1, speed: 450 }}
-          className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
-        >
-          <img src={icon} alt={title} className="w-16 h-16 object-contain " />
-          <h3 className="text-white text-center text-bold text-[20px]">
-            {title}
-          </h3>
-        </div>
-      </motion.div>
-    </Tilt>
+    <>
+      {width < 768 ? (
+        <Tilt className="xs:w-[250px] w-full">
+          <motion.div
+            initial="hidden"
+            animate={inView ? "show" : "hidden"} // Animate based on inView status
+            ref={ref} // Attach the ref to the section element
+            // variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
+            className="w-full rounded-[20px] green-pink-gradient p-[1px] shadow-card"
+          >
+            <div
+              // eslint-disable-next-line react/no-unknown-property
+              options={{ max: 45, scale: 1, speed: 450 }}
+              className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
+            >
+              <img
+                src={icon}
+                alt={title}
+                className="w-16 h-16 object-contain "
+              />
+              <h3 className="text-white text-center text-bold text-[20px]">
+                {title}
+              </h3>
+            </div>
+          </motion.div>
+        </Tilt>
+      ) : (
+        <Tilt className="xs:w-[250px] w-full">
+          <motion.div
+            initial="hidden"
+            animate={inView ? "show" : "hidden"} // Animate based on inView status
+            ref={ref} // Attach the ref to the section element
+            variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
+            className="w-full rounded-[20px] green-pink-gradient p-[1px] shadow-card"
+          >
+            <div
+              // eslint-disable-next-line react/no-unknown-property
+              options={{ max: 45, scale: 1, speed: 450 }}
+              className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
+            >
+              <img
+                src={icon}
+                alt={title}
+                className="w-16 h-16 object-contain "
+              />
+              <h3 className="text-white text-center text-bold text-[20px]">
+                {title}
+              </h3>
+            </div>
+          </motion.div>
+        </Tilt>
+      )}
+    </>
   );
 };
 
 const About = () => {
   const [ref, inView] = useInView(); // Track if the component is in view
+  const windowSize = useRef([window.innerWidth, window.innerHeight]);
+  const [width, height] = windowSize.current;
   return (
     <>
-      <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>Introduction</p>
-        <h2 className={styles.sectionHeadText}>Overview.</h2>
-      </motion.div>
+      {width < 768 ? (
+        <div>
+          <p className={styles.sectionSubText}>Introduction</p>
+          <h2 className={styles.sectionHeadText}>Overview.</h2>
+        </div>
+      ) : (
+        <motion.div variants={textVariant()}>
+          <p className={styles.sectionSubText}>Introduction</p>
+          <h2 className={styles.sectionHeadText}>Overview.</h2>
+        </motion.div>
+      )}
+
       <motion.p
         initial="hidden"
         animate={inView ? "show" : "hidden"} // Animate based on inView status

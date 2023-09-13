@@ -21,9 +21,9 @@ function App() {
           <Hero></Hero>
         </div>
         <About />
+        <Works></Works>
         <Experience></Experience>
         <Tech></Tech>
-        <Works></Works>
         <Feedbacks></Feedbacks>
         <div className="relative z-0">
           <Contact></Contact>
