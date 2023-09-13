@@ -40,6 +40,7 @@ import {
   bookstore,
   expenseTracker,
   summarizer,
+  leaderboard,
   saba,
   dimond,
 
@@ -552,6 +553,36 @@ const jsProjects = [
     image: joke,
     source_code_link: "https://github.com/karanJ2212/Tell-Me-A-Joke/tree/main",
     live_link: "https://karanj2212.github.io/Tell-Me-A-Joke/",
+  },
+  {
+    name: "Tell-me-a-Joke",
+    description:
+      "A simple wireframe template for a Leaderboard, built using webpack and served by a webpack dev server,A Leaderboard list app, using webpack and ES6 features. This showcases the scores and ranks of players in amazing interface",
+    tags: [
+      {
+        name: "Javascript",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "ES6",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "html",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Webpack",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "css",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: leaderboard,
+    source_code_link: "https://github.com/karanJ2212/LEADERBOARD_",
+    live_link: "https://leaderboard-javascript.onrender.com/",
   },
 ];
 const projects = [

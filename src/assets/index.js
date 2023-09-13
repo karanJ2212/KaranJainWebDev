@@ -54,6 +54,7 @@ import ruby from "./tech/ruby.png";
 import saba from "./saba.jpeg";
 import dimond from "./dimond.jpeg";
 import blessing from "./blessing.jpeg";
+import leaderboard from "./leaderboard.png";
 
 export {
   logo,
@@ -69,6 +70,7 @@ export {
   awesomeBook,
   recipeApp,
   SHOPPINGSPREE,
+  leaderboard,
   murple_logo,
   at,
   infy,
