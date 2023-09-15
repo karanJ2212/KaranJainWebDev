@@ -192,7 +192,7 @@ const Works = () => {
             <span className="text-gray-100 opacity-40 ml-2">slide</span>
           </div>
 
-          <Slider {...settings}>
+          <Slider {...settings} className="cursor-grab active:cursor-grabbing">
             {reactProject.map((project, index) => (
               <ProjectCard
                 key={`project-${index}`}
@@ -205,7 +205,7 @@ const Works = () => {
           <p className={`${styles.sectionSubText} text-center mt-[100px]`}>
             Javascript Projects
           </p>
-          <Slider {...settings}>
+          <Slider {...settings} className="cursor-grab active:cursor-grabbing">
             {jsProjects.map((project, index) => (
               <ProjectCard
                 key={`project-${index}`}
