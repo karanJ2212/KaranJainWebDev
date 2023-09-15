@@ -148,32 +148,6 @@ const technologies = [
 
 const experiences = [
   {
-    title: "Full-stack Developer",
-    company_name: "Highlighted Personal Projects",
-    icon: personalproject,
-    iconBg: "#383E56",
-    date: "December 2022 - present",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies for various domains including E-commerce, Daily-use and entertainment.",
-      "Collaborating with cross-cultural teams of developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Founder and Operations Manager",
-    company_name: "Aryan Textiles Jabalpur",
-    icon: at,
-    iconBg: "#E6DEDD",
-    date: "Jan 2018 - Dec 2022",
-    points: [
-      "Designed the entire production process from design to delivery, ensuring high-quality standards and timely delivery",
-      "Optimized production and increased the efficiency of the process by utilizing data analysis and process improvement techniques.",
-      "Demonstrated strong leadership skills by managing a team of 20 employees, ensuring smooth operations and meeting production targets.",
-      "Possessing a diverse skill set gained from 4+ years of successfully operating a sock manufacturing company, including expertise in supply chain management, product development, team leadership,operation management, growth driving, business innovation, and process optimization, these skills are highly transferable and can be crucial in web development, where complex projects requiring collaboration with multiple stakeholders and data-driven decision making can be efficiently delivered with a focus on delivering high-quality solutions on time and within budget",
-    ],
-  },
-  {
     title: "Sr System Engineer",
     company_name: "Infosys",
     icon: infy,
@@ -187,16 +161,42 @@ const experiences = [
     ],
   },
   {
+    title: "Full-stack Developer",
+    company_name: "Highlighted Personal Projects",
+    icon: personalproject,
+    iconBg: "#383E56",
+    date: "Sep 2022 - present",
+    points: [
+      "Developing and maintaining web applications using React.js and other related technologies for various domains including E-commerce, Daily-use and entertainment.",
+      "Collaborating with cross-cultural teams of developers to create high-quality products.",
+      "Implementing responsive design and ensuring cross-browser compatibility.",
+      "Participating in code reviews and providing constructive feedback to other developers.",
+    ],
+  },
+  {
     title: "Student Mentor",
     company_name: "Microverse",
     icon: murple_logo,
     iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
+    date: "Sep 2022 - Present",
     points: [
       "Mentoring junior web developers, and providing technical support through code reviews",
       " Proposing improvements to code organization to improve code quality and overall performance.",
       " Providing advice and tips on maintaining motivation to maintain longevity in the program.",
       "Participating in code reviews and providing constructive feedback to other developers.",
+    ],
+  },
+  {
+    title: "Founder and Operations Manager",
+    company_name: "Aryan Textiles Jabalpur",
+    icon: at,
+    iconBg: "#E6DEDD",
+    date: "April 2017 - Sep 2022",
+    points: [
+      "Designed the entire production process from design to delivery, ensuring high-quality standards and timely delivery",
+      "Optimized production and increased the efficiency of the process by utilizing data analysis and process improvement techniques.",
+      "Demonstrated strong leadership skills by managing a team of 20 employees, ensuring smooth operations and meeting production targets.",
+      "Possessing a diverse skill set gained from 4+ years of successfully operating a sock manufacturing company, including expertise in supply chain management, product development, team leadership,operation management, growth driving, business innovation, and process optimization, these skills are highly transferable and can be crucial in web development, where complex projects requiring collaboration with multiple stakeholders and data-driven decision making can be efficiently delivered with a focus on delivering high-quality solutions on time and within budget",
     ],
   },
 ];
