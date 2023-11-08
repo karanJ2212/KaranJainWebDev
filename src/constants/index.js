@@ -647,7 +647,7 @@ const projects = [
       },
     ],
     image: expenseTracker,
-    source_code_link: "https://github.com/karanJ2212/BnB-homes",
+    source_code_link: "https://github.com/karanJ2212/Expense-tracker",
   },
 ];
 
